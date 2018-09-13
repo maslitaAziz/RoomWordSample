@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">RoomWordsSample</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Clear all data</string>
     <string name="placeholder">placehoder text</string>
 </resources>

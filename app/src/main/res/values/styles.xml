@@ -28,4 +28,24 @@
         <item name="android:textColor">@color/colorTextPrimary</item>
     </style>
 
+    <style name="edit_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:inputType">textAutoComplete</item>
+    </style>
+
+    <style name="save_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+        <item name="android:text">"Save"</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
 </resources>

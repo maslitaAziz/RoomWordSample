@@ -48,17 +48,24 @@ public abstract class WordRoomDatabase extends RoomDatabase {
         private final WordDao mDao;
 
         PopulateDatabaseAsync(WordRoomDatabase database) {
-            this.mDao = database.wordDao();
+            mDao = database.wordDao();
         }
-
-
 
         @Override
         protected Void doInBackground(Void... voids) {
-            mDao.deleteAll(); //delete semua dlm database
-            for(int i=0; i<words.length; i++) {
-                mDao.insert(new Word(words[i]));  //initialise database
+
+            //kalau x de word, insert kan
+            if (mDao.getAnyWord().length == 0) {
+              //  mDao.deleteAll(); //delete semua dlm database
+                for (int i = 0; i < words.length; i++) {
+                    mDao.insert(new Word(words[i]));  //initialise database
+                }
             }
+
+         /*   for (int i = 0; i <= words.length - 1; i++) {
+                Word word = new Word(words[i]);
+                mDao.insert(word);
+            }*/
             return null;
         }
     }
